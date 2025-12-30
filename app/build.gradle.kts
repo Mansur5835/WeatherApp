@@ -20,6 +20,15 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
+        val key = project.findProperty("apiKey")?.toString() ?: ""
+
+        buildConfigField(
+            "String",
+            "API_KEY",
+            "\"$key\""
+        )
     }
 
     buildTypes {
@@ -40,7 +49,10 @@ android {
 //    }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
+
+
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
@@ -67,7 +79,6 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
 
-
     // state management
     implementation(libs.mvikotlin)
     implementation(libs.mvikotlin.main)
@@ -90,7 +101,7 @@ dependencies {
 
 
     // image
-    implementation(libs.compose)
+    implementation(libs.glide)
 
 
     // icons

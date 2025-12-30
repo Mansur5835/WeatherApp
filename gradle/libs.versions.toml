@@ -1,6 +1,6 @@
 [versions]
 agp = "8.13.2"
-compose = "1.0.0-beta08"
+glide = "1.0.0-beta08"
 converterGson = "3.0.0"
 dagger = "2.57.2"
 kotlin = "2.3.0"
@@ -23,7 +23,7 @@ roomKtx = "2.8.4"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomKtx" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
-compose = { module = "com.github.bumptech.glide:compose", version.ref = "compose" }
+glide = { module = "com.github.bumptech.glide:compose", version.ref = "glide" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
