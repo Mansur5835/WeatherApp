@@ -1,5 +1,6 @@
 package com.terminal.weatherapp.data.network.api
 
+import com.terminal.weatherapp.data.network.dto.CityDto
 import com.terminal.weatherapp.data.network.dto.WeatherCurrentDto
 import com.terminal.weatherapp.data.network.dto.WeatherForecastDto
 import com.terminal.weatherapp.domain.entity.City
@@ -25,6 +26,6 @@ interface ApiService {
     @GET("search.json")
     suspend fun searchCity(
         @Query("q") query: String,
-    ): List<City>
+    ): List<CityDto>
 
 }

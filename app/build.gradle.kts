@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -88,6 +89,8 @@ dependencies {
     // MVI
     implementation("com.arkivanov.decompose:decompose:3.4.0")
     implementation("com.arkivanov.decompose:extensions-compose:3.4.0")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
 
 
     // local db

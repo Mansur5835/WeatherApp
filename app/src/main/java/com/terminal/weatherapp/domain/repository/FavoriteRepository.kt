@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface FavoriteRepository {
 
-    val favoritesCities: Flow<City>
+    val favoritesCities: Flow<List<City>>
 
     fun observeIsFavorite(cityId: Int): Flow<Boolean>
 
